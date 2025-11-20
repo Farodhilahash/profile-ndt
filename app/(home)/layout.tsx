@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function HomeLayout({
   children,
 }: {
@@ -6,11 +8,11 @@ export default function HomeLayout({
   return (
     <>
       <header className="w-full sticky top-0 z-40">
-        <div className="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between glass">
+        <div className="mx-auto px-24 py-6 flex items-center justify-between glass">
           <div className="flex items-center gap-3">
-            <div className="rounded-md w-11 h-11 flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 border border-white/5">
+            <div className="rounded-md w-11 h-11 flex items-center justify-center ">
               {/* Logo mark */}
-              <svg
+              {/* <svg
                 width="28"
                 height="28"
                 viewBox="0 0 24 24"
@@ -34,17 +36,18 @@ export default function HomeLayout({
                   strokeLinejoin="round"
                   opacity="0.7"
                 />
-              </svg>
+              </svg> */}
+              <Image src="/logo-white.png" alt="Logo" width={120} height={40} className=""/>
             </div>
             <div>
-              <div className="text-sm font-semibold tracking-wide uppercase">
-                Nahcoda Digital
+              <div className="text-lg font-semibold tracking-wide uppercase">
+                NAHCODA
               </div>
-              <div className="text-xs text-slate-400 -mt-0.5">Teknologi</div>
+              <div className="text-xs text-slate-400 -mt-0.5">DIGITAL TEKNOLOGI</div>
             </div>
           </div>
 
-          <nav className="hidden md:flex items-center gap-8 text-sm text-slate-300">
+          <nav className="hidden md:flex items-center gap-8 text-sm text-slate-400">
             <a className="hover:text-white transition" href="#about">
               About
             </a>
@@ -59,14 +62,14 @@ export default function HomeLayout({
             </a>
           </nav>
 
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <a
               href="#contact"
               className="inline-block px-4 py-2 rounded-md bg-gradient-to-r from-indigo-600 to-sky-500 text-sm font-medium shadow-sm"
             >
               Contact Us
             </a>
-          </div>
+          </div> */}
 
           {/* Mobile menu button (visible in Figma import as separate layer) */}
           <button className="md:hidden p-2 rounded-md bg-transparent border border-white/5">
@@ -89,7 +92,7 @@ export default function HomeLayout({
         </div>
       </header>
       {children}
-      <footer className="mt-20 border-t border-white/5 pt-8 pb-20 text-center text-sm text-slate-400">
+      <footer className="mt-20 border-t border-white/5 pt-8 pb-20 text-center text-sm text-white">
         © {new Date().getFullYear()} Nahcoda Digital Teknologi — All rights
         reserved.
       </footer>

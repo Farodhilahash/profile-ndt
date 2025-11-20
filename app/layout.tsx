@@ -3,7 +3,7 @@ import { inter } from '@/app/ui/fonts';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="bg-gradient-to-b from-black via-black to-slate-500">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Nahcoda Digital Teknologi — Company Profile</title>
